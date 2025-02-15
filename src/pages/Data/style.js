@@ -47,7 +47,7 @@ export const SelectBtn = styled.button`
   background-image: linear-gradient(to bottom, #bfbcf5 0%, #cfccfb 100%);
   border: 1px solid;
   border-color: #7761b4;
-  margin-top: 5px;
+  margin-top: 40px;
 `;
 
 export const UploadBtn = styled.button`
@@ -75,7 +75,6 @@ export const UploadStatus = styled.div`
   background-color: ${({ success }) => (success ? "#E8F5E9" : "#FFEBEE")};
   border: 1px solid ${({ success }) => (success ? "#4CAF50" : "#F44336")};
 `;
-
 
 export const Announce = styled.p`
   margin-bottom: 30px;

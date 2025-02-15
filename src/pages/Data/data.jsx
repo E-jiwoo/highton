@@ -56,7 +56,7 @@ const Data = () => {
         setSelectedFiles([]);
       } else {
         console.log("Response Status:", response.status);
-        console.log(response.json())
+        console.log(response.json());
         throw new Error("업로드 실패");
       }
     } catch (error) {
@@ -100,7 +100,7 @@ const Data = () => {
           <S.SelectBtn
             onClick={() => document.getElementById("file-upload").click()}
           >
-            {selectedFiles.length > 0 ? "추가 선택" : "파일 선택하기"}
+            파일 선택하기
           </S.SelectBtn>
 
           <S.UploadBtn onClick={handleUpload} disabled={uploading}>
@@ -109,8 +109,8 @@ const Data = () => {
 
           {uploadSuccess !== null && (
             <S.UploadStatus success={uploadSuccess.toString()}>
-            {uploadSuccess ? "업로드 성공!" : "업로드 실패!"}
-            </S.UploadStatus>     
+              {uploadSuccess ? "업로드 성공!" : "업로드 실패!"}
+            </S.UploadStatus>
           )}
 
           <S.Announce>카카오톡 txt 파일을 업로드 해주세요.</S.Announce>
