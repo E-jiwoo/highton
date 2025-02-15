@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 402px;
-  height: 966px;
+  height: 850px;
   background-image: linear-gradient(to bottom, #070118, #2c2a49);
 `;
 
@@ -63,4 +63,37 @@ export const Speech2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+export const TextInputWrapper = styled.div`
+  position: relative;
+  width: 400px;
+  height: 60px;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+`;
+
+export const Next = styled.img`
+  margin-right: 15px;
+`;
+
+export const TextInput = styled.input`
+  width: 260px;
+  padding: 12px;
+  margin-right: 20px;
+  background-color: #352f46;
+  color: #fff;
+  border-radius: 24px;
+  border: none;
+  font-size: 14px;
+  font-family: "Pretendard-R";
+  outline: none;
+`;
+
+export const Send = styled.img`
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 `;

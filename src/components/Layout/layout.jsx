@@ -1,13 +1,16 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import Header from "./Header/header";
 import Navigator from "./Navigator/navigator";
 
 const Layout = ({ children }) => {
+  const location = useLocation();
+
   return (
     <>
       <Header />
       <main>{children}</main>
-      <Navigator />
+      {location.pathname !== "/chat" && <Navigator />}
     </>
   );
 };
