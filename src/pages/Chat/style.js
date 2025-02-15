@@ -4,74 +4,63 @@ export const Container = styled.div`
   width: 402px;
   height: 966px;
   background-image: linear-gradient(to bottom, #070118, #2c2a49);
+`;
+
+export const Contain = styled.div``;
+
+export const Chatbot = styled.div`
+  position: relative;
+  top: 130px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 15px;
+`;
+
+export const Profile = styled.div`
+  margin-left: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background-color: #672ae9;
+`;
+export const Speech = styled.div`
+  background-color: #352f46;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Pretendard-R";
+  padding: 0px 15px;
+  border-radius: 5px 50px 50px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* 초과 요소 숨기기 */
 `;
 
-export const Contain = styled.div`
+export const Time = styled.div`
+  color: #aca2c5;
+  font-size: 10px;
+  font-family: "Pretendard-R";
+  margin-top: 15px;
+`;
+
+export const User = styled.div`
+  position: relative;
+  top: 160px;
+  margin-left: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 15px;
+`;
+
+export const Speech2 = styled.div`
+  background-color: #672ae9;
+  color: #fff;
+  font-size: 14px;
+  font-family: "Pretendard-R";
+  padding: 8px 18px;
+  border-radius: 50px 5px 50px 50px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 420px; /* 가로 최대 크기 제한 */
-  height: 90vh;
-`;
-
-export const ChatBox = styled.div`
-  width: 100%;
-  max-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  background: transparent; /* 배경 흰색 제거 */
-  padding: 20px;
-`;
-
-export const MessageContainer = styled.div`
-  flex-grow: 1;
-  overflow-y: auto;
-  max-height: 70vh; /* 메시지 창 크기 제한 */
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const Message = styled.div`
-  background-color: ${(props) => (props.isMyMessage ? "#4f93e2" : "#e2e2e2")};
-  color: ${(props) => (props.isMyMessage ? "white" : "black")};
-  padding: 10px;
-  border-radius: 12px;
-  max-width: 75%;
-  align-self: ${(props) => (props.isMyMessage ? "flex-end" : "flex-start")};
-  margin: 5px 0;
-`;
-
-export const InputContainer = styled.div`
-  display: flex;
-  align-items: center;
-  bottom: 0;
-  gap: 10px;
-  padding: 10px;
-  border-top: 1px solid #ccc;
-`;
-
-export const InputText = styled.input`
-  flex-grow: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-`;
-
-export const SendBtn = styled.button`
-  background-color: #4f93e2;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-  &:hover {
-    background-color: #3578c8;
-  }
 `;
