@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 402px;
+  height: 966px;
   background-image: linear-gradient(to bottom, #070118, #2c2a49);
   display: flex;
   justify-content: center;

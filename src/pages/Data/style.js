@@ -63,6 +63,20 @@ export const UploadBtn = styled.button`
   margin-bottom: 8px;
 `;
 
+export const UploadStatus = styled.div`
+  font-family: "Pretendard-M";
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  width: fit-content;
+  color: ${({ success }) => (success ? "#2E7D32" : "#D32F2F")};
+  background-color: ${({ success }) => (success ? "#E8F5E9" : "#FFEBEE")};
+  border: 1px solid ${({ success }) => (success ? "#4CAF50" : "#F44336")};
+`;
+
+
 export const Announce = styled.p`
   margin-bottom: 30px;
   font-family: "Pretendard-M";
