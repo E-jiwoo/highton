@@ -30,7 +30,7 @@ export const Profile = styled.div`
   margin-left: 20px;
   width: 32px;
   height: 32px;
-  border-radius: 32px;
+  border-radius: 50px;
   background-color: #672ae9;
 `;
 export const Speech = styled.div`
@@ -38,11 +38,13 @@ export const Speech = styled.div`
   color: #fff;
   font-size: 14px;
   font-family: "Pretendard-R";
-  padding: 0px 15px;
-  border-radius: 5px 50px 50px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 300px;
+  word-break: break-all;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  line-height: 1.4;
 `;
 
 export const Time = styled.div`
@@ -65,7 +67,7 @@ export const User = styled.div`
 export const Speech2 = styled.div`
   background-color: #672ae9;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   max-width: 100%;
   word-wrap: break-word;
   white-space: pre-wrap;

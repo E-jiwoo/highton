@@ -1,27 +1,24 @@
 import React, { useState } from "react";
 import * as S from "./style";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Layout from "../../components/Layout/layout";
 import planet from "../../assets/planet.svg";
 import question from "../../assets/question.svg";
 import del from "../../assets/delete.svg";
 
-// const API_URL = "https://hithon.kimjinwoo.me/api/v1/train/";
 const API_URL = "http://localhost:8006/api/v1/train/";
 
 const Data = () => {
   const [selectedFiles, setSelectedFiles] = useState([]);
   const [uploading, setUploading] = useState(false);
-  const [uploadSuccess, setUploadSuccess] = useState(null);
+  const navigate = useNavigate();
 
   const handleFileChange = (event) => {
     const files = Array.from(event.target.files);
-
     const newFiles = files.filter(
       (file) => !selectedFiles.some((f) => f.name === file.name)
     );
-
     setSelectedFiles((prevFiles) => [...prevFiles, ...newFiles]);
   };
 
@@ -36,7 +33,6 @@ const Data = () => {
     }
 
     setUploading(true);
-    setUploadSuccess(null);
 
     const formData = new FormData();
     selectedFiles.forEach((file) => {
@@ -52,16 +48,15 @@ const Data = () => {
       });
 
       if (response.status === 202) {
-        setUploadSuccess(true);
         setSelectedFiles([]);
+        navigate("/complete");
       } else {
-        console.log("Response Status:", response.status);
-        console.log(response.json());
+        console.error("Unexpected response status:", response.status);
         throw new Error("업로드 실패");
       }
     } catch (error) {
       console.error("업로드 오류:", error);
-      setUploadSuccess(false);
+      alert("업로드에 실패했습니다.");
     } finally {
       setUploading(false);
     }
@@ -72,7 +67,7 @@ const Data = () => {
       <S.Container>
         <S.Contain>
           <S.Img src={planet} alt="행성" />
-          <S.Text>아름님의 가장 최근 업로드는</S.Text>
+          <S.Text>지우님의 가장 최근 업로드는</S.Text>
           <S.SBText>
             2025년 02월 16일 <S.SBText_o>이였어요</S.SBText_o>
           </S.SBText>
@@ -106,12 +101,6 @@ const Data = () => {
           <S.UploadBtn onClick={handleUpload} disabled={uploading}>
             {uploading ? "업로드 중..." : "업로드하기"}
           </S.UploadBtn>
-
-          {uploadSuccess !== null && (
-            <S.UploadStatus success={uploadSuccess.toString()}>
-              {uploadSuccess ? "업로드 성공!" : "업로드 실패!"}
-            </S.UploadStatus>
-          )}
 
           <S.Announce>카카오톡 txt 파일을 업로드 해주세요.</S.Announce>
           <S.Icon src={question} alt="물음표" />
