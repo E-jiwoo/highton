@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 402px;
-  height: 850px;
+  height: 900px;
   background-image: linear-gradient(to bottom, #070118, #2c2a49);
 `;
 
@@ -14,8 +14,8 @@ export const Contain = styled.div`
   word-wrap: break-word;
   white-space: pre-wrap;
   overflow-wrap: break-word;
+  height: calc(100% - 60px);
 `;
-
 
 export const Chatbot = styled.div`
   position: relative;
