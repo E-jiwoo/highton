@@ -6,7 +6,16 @@ export const Container = styled.div`
   background-image: linear-gradient(to bottom, #070118, #2c2a49);
 `;
 
-export const Contain = styled.div``;
+export const Contain = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+`;
+
 
 export const Chatbot = styled.div`
   position: relative;
@@ -45,8 +54,8 @@ export const Time = styled.div`
 
 export const User = styled.div`
   position: relative;
-  top: 160px;
-  margin-left: 100px;
+  top: 130px;
+  margin-left: 230px;
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -55,15 +64,16 @@ export const User = styled.div`
 
 export const Speech2 = styled.div`
   background-color: #672ae9;
-  color: #fff;
-  font-size: 14px;
-  font-family: "Pretendard-R";
-  padding: 8px 18px;
-  border-radius: 50px 5px 50px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  font-size: 1rem;
+  line-height: 1.4;
 `;
+
 export const TextInputWrapper = styled.div`
   position: relative;
   width: 400px;
